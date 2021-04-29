@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>{{contactName}}</title>
+    <link rel="icon" href="/img/thinkingTesterIcon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>
+            <button id="edit-contact" onclick="location.href='/editContact'">Edit Contact</button>
+            <button id="delete">Delete Contact</button>
+            <button id="return" onclick="location.href='/contactList'">Return to Contact List</button>
+        </p>
+        
+        <form id="contactDetails">
+            <p>
+                <label for="firstName"> First Name:</label>
+                <span id="firstName"></span>
+            </p>
+            <p>
+                <label for="lastName"> Last Name:</label>
+                <span id="lastName"></span>
+            </p>
+            <p>
+                <label for="birthdate"> Date of Birth:</label>
+                <span id="birthdate"></span>
+            </p>
+            <p>
+                <label for="email"> Email:</label>
+                <span id="email"></span>
+            </p>
+            <p>
+                <label for="phone"> Phone:</label>
+                <span id="phone"></span>
+            </p>
+            <p>
+                <label for="street1"> Street Address 1:</label>
+                <span id="street1"></span>             
+            </p>
+            <p>
+                <label for="street2"> Street Address 2:</label>
+                <span id="street2"></span>
+            </p>
+            <p>
+                <label for="city"> City:</label>
+                <span id="city"></span>
+            </p>
+            <p>
+                <label for="stateProvince"> State or Province:</label>
+                <span id="stateProvince"></span>
+            </p>
+            <p>
+                <label for="postalCode"> Postal Code:</label>
+                <span id="postalCode"></span>
+            </p>
+            <p>
+                <label for="country"> Country:</label>
+                <span id="country"></span>
+            </p>
+        </form>
+    </div>
+    {{>footer}}
+    <script src="/js/contactDetails.js"></script>
+</body>
+
+</html>
