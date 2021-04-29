@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Add Contact</title>
+    <link rel="icon" href="/img/thinkingTesterIcon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <span id="error"></span>
+        <form id="add-contact">
+            <p>
+                <label for="firstName"> * First Name:</label>
+                <input id="firstName" placeholder="First Name">
+                <label for="lastName"> * Last Name:</label>
+                <input id="lastName" placeholder="Last Name">
+            </p>
+            <p>
+                <label for="birthdate"> Date of Birth:</label>
+                <input id="birthdate" placeholder="yyyy-MM-dd">
+            </p>
+            <p>
+                <label for="email"> Email:</label>
+                <input id="email" placeholder="example@email.com">
+                <label for="phone"> Phone:</label>
+                <input id="phone" placeholder="8005551234">
+            </p>
+            <p>
+                <label for="street1"> Street Address 1:</label>
+                <input id="street1" placeholder="Address 1">
+                
+            </p>
+            <p>
+                <label for="street2"> Street Address 2:</label>
+                <input id="street2" placeholder="Address 2">
+            </p>
+            <p>
+                <label for="city"> City:</label>
+                <input id="city" placeholder="City">
+                <label for="stateProvince"> State or Province:</label>
+                <input id="stateProvince" placeholder="State or Province">
+            </p>
+            <p>
+                <label for="postalCode"> Postal Code:</label>
+                <input id="postalCode" placeholder="Postal Code">
+                <label for="country"> Country:</label>
+                <input id="country" placeholder="Country">
+            </p>
+        </form>
+        <p>
+            <button id="submit" type="submit" form="add-contact">Submit</button>
+            <button id="cancel" onclick="location.href='/contactList'">Cancel</button>
+        </p>
+    </div>
+    {{>footer}}
+    <script src="/js/addContact.js"></script>
+</body>
+
+</html>

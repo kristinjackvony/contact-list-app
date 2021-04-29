@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>{{contactName}}</title>
+    <link rel="icon" href="/img/thinkingTesterIcon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <span id="error"></span>
+        <form id="edit-contact">
+            <p>
+                <label for="firstName"> First Name:</label>
+                <input id="firstName" contenteditable="true">
+            </p>
+            <p>
+                <label for="lastName"> Last Name:</label>
+                <input id="lastName" contenteditable="true">
+            </p>
+            <p>
+                <label for="birthdate"> Date of Birth:</label>
+                <input id="birthdate" contenteditable="true">
+            </p>
+            <p>
+                <label for="email"> Email:</label>
+                <input id="email" contenteditable="true">
+            </p>
+            <p>
+                <label for="phone"> Phone:</label>
+                <input id="phone" contenteditable="true">
+            </p>
+            <p>
+                <label for="street1"> Street Address 1:</label>
+                <input id="street1" contenteditable="true">          
+            </p>
+            <p>
+                <label for="street2"> Street Address 2:</label>
+                <input id="street2" contenteditable="true">
+            </p>
+            <p>
+                <label for="city"> City:</label>
+                <input id="city" contenteditable="true">
+            </p>
+            <p>
+                <label for="stateProvince"> State or Province:</label>
+                <input id="stateProvince" contenteditable="true">
+            </p>
+            <p>
+                <label for="postalCode"> Postal Code:</label>
+                <input id="postalCode" contenteditable="true">
+            </p>
+            <p>
+                <label for="country"> Country:</label>
+                <input id="country" contenteditable="true">
+            </p>
+        </form>
+        <p>
+            <button id = "submit" type="submit" form="edit-contact">Submit</button>
+            <button id = "cancel" onclick="location.href='/contactDetails'">Cancel</button>
+        </p>
+    </div>
+    {{>footer}}
+    <script src="/js/editContact.js"></script>
+</body>
+
+</html>

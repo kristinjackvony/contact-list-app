@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Add User</title>
+    <link rel="icon" href="/img/thinkingTesterIcon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <h1>{{title}}</h1>
+        <p>Sign up to begin adding your contacts!</p>
+        <span id="error"></span>
+        <form id="add-user">
+            <p>
+                <input id="firstName" placeholder="First Name">
+            </p>
+            <p>
+                <input id="lastName" placeholder="Last Name">
+            </p>
+            <p>
+                <input id="email" placeholder="Email">
+            </p>
+            <p>
+                <input id="password" placeholder="Password">
+            </p>
+        </form>
+        <p>
+            <button id="submit" type="submit" form="add-user">Submit</button>
+            <button id="cancel" onclick="location.href='/login'">Cancel</button>
+        </p>  
+    </div>
+    {{>footer}}
+    <script src="/js/addUser.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My Contacts</title>
+    <link rel="icon" href="/img/thinkingTesterIcon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Click on any contact to view the Contact Details</p>
+        <p>
+            <button id="add-contact" onclick="location.href='/addContact'">Add a New Contact</button>
+        </p>
+        <div class='contacts'></div>   
+    </div>
+    {{>footer}}
+    <script src="/js/contactList.js"></script>
+</body>
+
+</html>
