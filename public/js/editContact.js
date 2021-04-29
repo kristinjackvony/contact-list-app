@@ -37,7 +37,7 @@ const populateForm = (contact) => {
     }
 }
 
-fetch('http://localhost:3000/contacts/' + id, {
+fetch('/contacts/' + id, {
     method: 'GET',
     headers: {
         'Authorization': 'Bearer ' + token
@@ -108,7 +108,7 @@ form.addEventListener('submit', (e) => {
         bodyData.country = country
     }
 
-    fetch('http://localhost:3000/contacts/' + id, {
+    fetch('/contacts/' + id, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ form.addEventListener('submit', (e) => {
                 errorMessage.innerHTML =  data.message
             })
         } else {
-            window.location = "http://localhost:3000/contactDetails"
+            window.location = "/contactDetails"
         }
     }) 
 })

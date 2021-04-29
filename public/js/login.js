@@ -10,7 +10,7 @@ signupForm.addEventListener('submit', (e) => {
 
     const bodyData = {'email': email, 'password': password}
 
-    fetch('http://localhost:3000/users/login', {
+    fetch('/users/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ signupForm.addEventListener('submit', (e) => {
             response.json().then((data) => {
                 token = data.token
                 console.log(token)
-                window.location = "http://localhost:3000/contactList"
+                window.location = "/contactList"
             })
         }
     })

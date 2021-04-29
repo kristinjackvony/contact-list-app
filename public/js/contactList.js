@@ -103,7 +103,7 @@ const appendContacts = (singleContact, singleContactIndex) => {
     contactTable.append(contactTableBodyRow)
 }
 
-fetch('http://localhost:3000/contacts', {
+fetch('/contacts', {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',

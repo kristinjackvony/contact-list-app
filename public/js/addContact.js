@@ -59,7 +59,7 @@ contactForm.addEventListener('submit', (e) => {
         bodyData.country = country
     }
     
-    fetch('http://localhost:3000/contacts', {
+    fetch('/contacts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ contactForm.addEventListener('submit', (e) => {
             })
         }
         else {
-            window.location = "http://localhost:3000/contactList"
+            window.location = "/contactList"
         }    
     }) 
 })

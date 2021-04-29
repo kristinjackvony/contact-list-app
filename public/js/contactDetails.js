@@ -37,7 +37,7 @@ const populateForm = (contact) => {
     }
 }
 
-fetch('http://localhost:3000/contacts/' + id, {
+fetch('/contacts/' + id, {
     method: 'GET',
     headers: {
         'Authorization': 'Bearer ' + token
@@ -55,7 +55,7 @@ fetch('http://localhost:3000/contacts/' + id, {
 deleteButton.addEventListener('click', (e) => {
     var response = confirm('Are you sure you want to delete this contact?')
     if(response == true) {
-        fetch('http://localhost:3000/contacts/' + id, {
+        fetch('/contacts/' + id, {
         method: 'DELETE',
         headers: {
             'Authorization': 'Bearer ' + token
@@ -64,7 +64,7 @@ deleteButton.addEventListener('click', (e) => {
             if (response.error) {
                 console.log(response.error)
             }  else {
-                window.location = "http://localhost:3000/contactList"
+                window.location = "/contactList"
             }
         }) 
     }    
