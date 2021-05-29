@@ -112,9 +112,20 @@ router.patch('/contacts/:id', auth, async (req, res) => {
     else {
         try {
             const contact = await Contact.findOneAndUpdate({ _id, owner: req.user._id}, { new: true, runValidators: true, useFindAndModify: false})
-
             if (!contact) {
                 return res.status(404).send()
+            }
+            if (contact.birthdate == null) {
+                contact.set('birthdate', undefined, {strict: false} )
+            }
+            if (contact.email == null) {
+                contact.set('email', undefined, {strict: false} )
+            }
+            if (contact.phone == null) {
+                contact.set('phone', undefined, {strict: false} )
+            }
+            if (contact.postalCode == null) {
+                contact.set('postalCode', undefined, {strict: false} )
             }
             updates.forEach((update) => contact[update] = req.body[update])
             await contact.save()
